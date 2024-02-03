@@ -42,8 +42,8 @@ fun MostOfferListView() {
             Spacer(modifier = Modifier.height(5.dp))
             Text(
                 modifier = Modifier.padding(start = 30.dp,10.dp),
-                text = "نگارستان", fontSize = 35.sp ,
-            style = TextStyle(fontFamily = FontFamily(Font(R.font.iran)))
+                text = "نگارستان", fontSize = 30.sp ,
+            style = TextStyle(fontFamily = FontFamily(Font(R.font.shek)))
             )
             Image(painter = painterResource(id = R.drawable.dis), contentDescription = "",
             modifier = Modifier

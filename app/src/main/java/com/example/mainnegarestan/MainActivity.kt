@@ -27,8 +27,12 @@ import com.example.mainnegarestan.screen.CarpetPanelLearn
 import com.example.mainnegarestan.screen.CategoryScreen
 import com.example.mainnegarestan.screen.CollageLearn
 import com.example.mainnegarestan.screen.HomeScreen
+import com.example.mainnegarestan.screen.LoginScreen
 import com.example.mainnegarestan.screen.MoquetteLearn
+import com.example.mainnegarestan.screen.NewAdvertiseOneScreen
+import com.example.mainnegarestan.screen.NewAdvertiseTwoScreen
 import com.example.mainnegarestan.screen.ProfileScreen
+import com.example.mainnegarestan.screen.RegisterScreen
 import com.example.mainnegarestan.screen.RugLearn
 import com.example.mainnegarestan.screen.component.BottomNavigationView
 import com.example.mainnegarestan.screen.util.CarpetPanelCategory
@@ -79,7 +83,7 @@ class MainActivity : ComponentActivity() {
                                     CategoryScreen()
                                 }
                                 composable("profile") {
-                                    ProfileScreen()
+                                    ProfileScreen(navController)
                                 }
                                 composable("carpetlearn"){
                                     CarpetLearning()
@@ -95,6 +99,18 @@ class MainActivity : ComponentActivity() {
                                 }
                                 composable("moqlearn"){
                                     MoquetteLearn()
+                                }
+                                composable("login"){
+                                    LoginScreen(navController)
+                                }
+                                composable("register"){
+                                    RegisterScreen(navController)
+                                }
+                                composable("newadone"){
+                                    NewAdvertiseOneScreen()
+                                }
+                                composable("newadtwo"){
+                                    NewAdvertiseTwoScreen()
                                 }
                             }
                         }
