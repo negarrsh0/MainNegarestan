@@ -2,7 +2,6 @@
 
 package com.example.mainnegarestan.screen
 
-import android.provider.CalendarContract.Colors
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -20,7 +19,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -51,6 +49,7 @@ import com.example.mainnegarestan.screen.component_lists.SliderListView
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
+
 
     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
 
@@ -114,30 +113,29 @@ fun HomeScreen(navController: NavHostController) {
                                 )
                             ) {
                                 Box(
-                                modifier = Modifier
-                                    .width(100.dp)
-                                    .align(Alignment.CenterHorizontally)
-                                    .shadow(10.dp),
-                                Alignment.TopCenter
-                            ) {
-                                Image(
                                     modifier = Modifier
-                                        .height(160.dp)
-                                        .width(90.dp),
-                                    painter = painterResource(R.drawable.carpetcat),
-                                    contentDescription = null,
-                                )
-                            }
-                        }}
+                                        .width(100.dp)
+                                        .align(Alignment.CenterHorizontally)
+                                        .shadow(10.dp),
+                                    Alignment.TopCenter
+                                ) {
+                                    Image(
+                                        modifier = Modifier
+                                            .height(160.dp)
+                                            .width(90.dp),
+                                        painter = painterResource(R.drawable.carpetcat),
+                                        contentDescription = null,
+                                    )
+                                }
+                            }}
                         Text(text = "فرش",
                             modifier = Modifier
                                 .padding(5.dp)
 
                                 .align(alignment = Alignment.CenterHorizontally)
-                                , style = TextStyle(
+                            , style = TextStyle(
                                 fontSize = 20.sp,
                                 fontFamily = FontFamily(Font(R.font.yekan)))
-
                         )
                     }
                     Column(modifier = Modifier.padding(10.dp)) {
@@ -168,31 +166,31 @@ fun HomeScreen(navController: NavHostController) {
                                 )
                             ) {
 
-                            Box(
-                                modifier = Modifier
-                                    .width(100.dp)
-//                                    .align(Alignment.Center)
-                                    .shadow(10.dp),
-                                Alignment.TopCenter
-                            ) {
-                                Image(
+                                Box(
                                     modifier = Modifier
-                                        .height(160.dp)
-                                        .width(90.dp),
-                                    painter = painterResource(R.drawable.carpanelcat),
-                                    contentDescription = null,
-                                )
+                                        .width(100.dp)
+//                                    .align(Alignment.Center)
+                                        .shadow(10.dp),
+                                    Alignment.TopCenter
+                                ) {
+                                    Image(
+                                        modifier = Modifier
+                                            .height(160.dp)
+                                            .width(90.dp),
+                                        painter = painterResource(R.drawable.carpanelcat),
+                                        contentDescription = null,
+                                    )
+                                }
                             }
-                          }
                         }
                         Text(text = "تابلو فرش" ,
                             modifier = Modifier
                                 .padding(5.dp)
                                 .align(alignment = Alignment.CenterHorizontally),
                             style = TextStyle(
-                            fontSize = 20.sp,
-                            fontFamily = FontFamily(Font(R.font.yekan)))
-                            )
+                                fontSize = 20.sp,
+                                fontFamily = FontFamily(Font(R.font.yekan)))
+                        )
                     }
                     Column(modifier = Modifier.padding(10.dp)) {
                         Box(
@@ -262,8 +260,8 @@ fun HomeScreen(navController: NavHostController) {
                                 .padding(5.dp)
                                 .align(alignment = Alignment.CenterHorizontally),
                             style = TextStyle(
-                            fontSize = 20.sp,
-                            fontFamily = FontFamily(Font(R.font.yekan)))
+                                fontSize = 20.sp,
+                                fontFamily = FontFamily(Font(R.font.yekan)))
                         )
                     }
                 }
@@ -302,27 +300,27 @@ fun HomeScreen(navController: NavHostController) {
                                     )
                                 )
                             ) {
-                            Box(
-                                modifier = Modifier
-                                    .width(100.dp)
-//                                    .align(Alignment.Center)
-                                    .shadow(10.dp),
-                                Alignment.TopCenter
-                            ) {
-                                Image(
+                                Box(
                                     modifier = Modifier
-                                        .height(160.dp)
-                                        .width(90.dp),
-                                    painter = painterResource(R.drawable.colcat),
-                                    contentDescription = null,
-                                )
-                            }}
+                                        .width(100.dp)
+//                                    .align(Alignment.Center)
+                                        .shadow(10.dp),
+                                    Alignment.TopCenter
+                                ) {
+                                    Image(
+                                        modifier = Modifier
+                                            .height(160.dp)
+                                            .width(90.dp),
+                                        painter = painterResource(R.drawable.colcat),
+                                        contentDescription = null,
+                                    )
+                                }}
                         }
                         Text(text = "کلاژ",
                             modifier = Modifier
                                 .padding(5.dp)
                                 .align(alignment = Alignment.CenterHorizontally)
-                        , style = TextStyle(
+                            , style = TextStyle(
                                 fontSize = 20.sp,
                                 fontFamily = FontFamily(Font(R.font.yekan)))
                         )
@@ -355,27 +353,27 @@ fun HomeScreen(navController: NavHostController) {
                                     )
                                 )
                             ) {
-                            Box(
-                                modifier = Modifier
-                                    .width(100.dp)
-//                                    .align(Alignment.Center)
-                                    .shadow(10.dp),
-                                Alignment.TopCenter
-                            ) {
-                                Image(
+                                Box(
                                     modifier = Modifier
-                                        .height(160.dp)
-                                        .width(90.dp),
-                                    painter = painterResource(R.drawable.moqcat),
-                                    contentDescription = null,
-                                )
-                            }
-                        }}
+                                        .width(100.dp)
+//                                    .align(Alignment.Center)
+                                        .shadow(10.dp),
+                                    Alignment.TopCenter
+                                ) {
+                                    Image(
+                                        modifier = Modifier
+                                            .height(160.dp)
+                                            .width(90.dp),
+                                        painter = painterResource(R.drawable.moqcat),
+                                        contentDescription = null,
+                                    )
+                                }
+                            }}
                         Text(text = "موکت",
                             modifier = Modifier
                                 .padding(5.dp)
                                 .align(alignment = Alignment.CenterHorizontally)
-                        , style = TextStyle(
+                            , style = TextStyle(
                                 fontSize = 20.sp,
                                 fontFamily = FontFamily(Font(R.font.yekan)))
                         )
@@ -400,10 +398,10 @@ fun HomeScreen(navController: NavHostController) {
                             ,contentDescription ="")
                     }
                     Card(shape =  RoundedCornerShape(20.dp)) {
-                    Image(modifier = Modifier
-                        .width(180.dp)
-                        .height(180.dp), painter = painterResource(R.drawable.slide1),contentDescription = null)
-                }}
+                        Image(modifier = Modifier
+                            .width(180.dp)
+                            .height(180.dp), painter = painterResource(R.drawable.slide1),contentDescription = null)
+                    }}
                 Spacer(modifier = Modifier.height(20.dp))
                 Row(modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly,
@@ -418,13 +416,13 @@ fun HomeScreen(navController: NavHostController) {
                         )
                     }
                     Card(shape = CircleShape) {
-                    Image(
-                        modifier = Modifier
-                            .width(180.dp)
-                            .height(180.dp),
-                        painter = painterResource(R.drawable.slide3),
-                        contentDescription = null)
-                }}
+                        Image(
+                            modifier = Modifier
+                                .width(180.dp)
+                                .height(180.dp),
+                            painter = painterResource(R.drawable.slide3),
+                            contentDescription = null)
+                    }}
             }
             Spacer(modifier = Modifier.height(10.dp))
             Text(text = "هر گونه تخلف")
