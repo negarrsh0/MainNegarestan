@@ -131,7 +131,6 @@ fun HomeScreen(navController: NavHostController) {
                         Text(text = "فرش",
                             modifier = Modifier
                                 .padding(5.dp)
-
                                 .align(alignment = Alignment.CenterHorizontally)
                             , style = TextStyle(
                                 fontSize = 20.sp,

@@ -11,16 +11,14 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
-import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.mainnegarestan.screen.AddAdvertiseScreen
 import com.example.mainnegarestan.screen.AdvertiseScreen
 import com.example.mainnegarestan.screen.CarpetLearning
 import com.example.mainnegarestan.screen.CarpetPanelLearn
@@ -29,13 +27,12 @@ import com.example.mainnegarestan.screen.CollageLearn
 import com.example.mainnegarestan.screen.HomeScreen
 import com.example.mainnegarestan.screen.LoginScreen
 import com.example.mainnegarestan.screen.MoquetteLearn
-import com.example.mainnegarestan.screen.NewAdvertiseOneScreen
-import com.example.mainnegarestan.screen.NewAdvertiseTwoScreen
+
 import com.example.mainnegarestan.screen.ProfileScreen
 import com.example.mainnegarestan.screen.RegisterScreen
 import com.example.mainnegarestan.screen.RugLearn
+
 import com.example.mainnegarestan.screen.component.BottomNavigationView
-import com.example.mainnegarestan.screen.util.CarpetPanelCategory
 import com.example.mainnegarestan.ui.theme.MainNegarestanTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -60,7 +57,6 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-
                         Scaffold(
                             topBar = {
                                 TopAppBar(title = { Text("نگارستان") })
@@ -85,32 +81,29 @@ class MainActivity : ComponentActivity() {
                                 composable("profile") {
                                     ProfileScreen(navController)
                                 }
-                                composable("carpetlearn"){
+                                composable("carpetlearn") {
                                     CarpetLearning()
                                 }
-                                composable("carpanelearn"){
+                                composable("carpanelearn") {
                                     CarpetPanelLearn()
                                 }
-                                composable("ruglearn"){
+                                composable("ruglearn") {
                                     RugLearn()
                                 }
-                                composable("collagelearn"){
+                                composable("collagelearn") {
                                     CollageLearn()
                                 }
-                                composable("moqlearn"){
+                                composable("moqlearn") {
                                     MoquetteLearn()
                                 }
-                                composable("login"){
+                                composable("login") {
                                     LoginScreen(navController)
                                 }
-                                composable("register"){
+                                composable("register") {
                                     RegisterScreen(navController)
                                 }
-                                composable("newadone"){
-                                    NewAdvertiseOneScreen()
-                                }
-                                composable("newadtwo"){
-                                    NewAdvertiseTwoScreen()
+                                composable("addadv") {
+                                    AddAdvertiseScreen(navController)
                                 }
                             }
                         }
