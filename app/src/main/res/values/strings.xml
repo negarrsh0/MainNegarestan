@@ -29,4 +29,13 @@
     <string name="whatmoqt">موکت فرانسوی moquette یک نوع کف‌پوش است. این محصول از مواد اکرلیک پلی پروبلین و پلی استر یا ترکیبی از آنها ساخته می‌شود. از موکت می‌توان هم به عنوان یک پوشش استفاده نمود و هم به عنوان یک عایق حرارتی و صوتی. موکت به عنوان پوشش کف اتاق و راه‌رو در ساختمان، اتومبیل، هواپیما، قطار و سایر وسائل نقلیه مورد استفاده قرار می‌گیرد. در بسیاری از موارد دیگر نظیر صحنه نمایش تئاتر نیز از موکت استفاده می‌گردد.
 
 کلمه موکت وام‌واژه‌ای از زبان فرانسوی است. این کلمه که در فرانسوی Moquette نوشته می‌شود در اصل نوعی فرش کرک‌دار و پشمی یا از الیافی پشم گونه بود</string>
+    <string name="title_activity_carpet_advertise">CarpetAdvertiseActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_carpet_panel_advertise">CarpetPanelAdvertiseActivity</string>
+    <string name="title_activity_rug_advertise">RugAdvertiseActivity</string>
+    <string name="title_activity_moqette_advertise">MoqetteAdvertiseActivity</string>
+    <string name="title_activity_collage_advertise">CollageAdvertiseActivity</string>
+    <string name="title_activity_accessories_advertise">AccessoriesAdvertiseActivity</string>
 </resources>

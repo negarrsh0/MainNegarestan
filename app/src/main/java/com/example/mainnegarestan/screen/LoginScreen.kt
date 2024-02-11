@@ -241,7 +241,6 @@ fun SimpleOutlinedTextFieldSample() {
                     fontSize = 20.sp,
                     fontFamily = FontFamily(Font(R.font.yekan)))
             ) },
-//        placeholder = { Text(text = "شماره همراه") },
         keyboardOptions = KeyboardOptions(
             imeAction = androidx.compose.ui.text.input.ImeAction.Next,
             keyboardType = KeyboardType.Email
@@ -256,7 +255,6 @@ fun SimpleOutlinedTextFieldSample() {
                 // do something here
             }
         )
-
     )
 }
 
@@ -290,11 +288,8 @@ fun SimpleOutlinedPasswordTextField() {
         ),
         trailingIcon = {
             IconButton(onClick = { passwordHidden = !passwordHidden }) {
-//                val visibilityIcon =
-//                    if (passwordHidden) Visibility else VisibilityOff
-                // Please provide localized description for accessibility services
                 val description = if (passwordHidden) "Show password" else "Hide password"
-//                Icon(imageVector = visibilityIcon, contentDescription = description)
+
             }
         },
         modifier = Modifier.fillMaxWidth(0.8f),

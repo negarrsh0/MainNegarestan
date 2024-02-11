@@ -2,7 +2,7 @@
 
 package com.example.mainnegarestan.screen
 
-import android.transition.Visibility
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -20,7 +20,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -38,6 +37,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -52,11 +52,12 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.mainnegarestan.screen.addadv.CarpetAdvertiseActivity
 import com.example.mainnegarestan.R
-import com.google.android.filament.Box
 
 @Composable
 fun RegisterScreen(navController: NavController) {
+    val context = LocalContext.current
 
     Box(
         modifier = Modifier
@@ -142,10 +143,11 @@ fun RegisterScreen(navController: NavController) {
                 }
                 Spacer(modifier = Modifier.padding(5.dp))
                 androidx.compose.material3.TextButton(onClick = {
-                    navController.navigate("reset_page"){
-                        popUpTo(navController.graph.startDestinationId)
-                        launchSingleTop = true
-                    }
+                    context.startActivity(Intent(context, CarpetAdvertiseActivity::class.java))
+//                    navController.navigate("addadv"){
+//                        popUpTo(navController.graph.startDestinationId)
+//                        launchSingleTop = true
+//                    }
                 }) {
                     androidx.compose.material3.Text(
                         text = "بازیابی رمزعبور",
@@ -282,7 +284,6 @@ fun RegisterPassword() {
         )
     )
 }
-
 //password confirm
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
@@ -299,8 +300,7 @@ fun RegisterPasswordConfirm() {
                 style = TextStyle(
                     fontSize = 20.sp,
                     fontFamily = FontFamily(Font(R.font.yekan))
-                        ),
-            ) },
+                        )) },
         visualTransformation =
         if (passwordHidden) PasswordVisualTransformation() else VisualTransformation.None,
         //  keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
@@ -313,18 +313,13 @@ fun RegisterPasswordConfirm() {
             unfocusedBorderColor = MaterialTheme.colorScheme.primary),
         trailingIcon = {
             IconButton(onClick = { passwordHidden = !passwordHidden }) {
-   //             val visibilityIcon =
-//                    if (passwordHidden) Visibility else VisibilityOff
-                // Please provide localized description for accessibility services
                 val description = if (passwordHidden) "Show password" else "Hide password"
-//                Icon(imageVector = visibilityIcon, contentDescription = description)
             }
         },
         modifier = Modifier.fillMaxWidth(0.8f),
         keyboardActions = KeyboardActions(
             onDone = {
                 keyboardController?.hide()
-                // do something here
             }
         )
     )

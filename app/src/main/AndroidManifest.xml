@@ -16,6 +16,40 @@
         android:theme="@style/Theme.MainNegarestan"
         tools:targetApi="31">
         <activity
+            android:name=".screen.addadv.AccessoriesAdvertiseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_accessories_advertise"
+            android:theme="@style/Theme.MainNegarestan" />
+        <activity
+            android:name=".screen.addadv.CollageAdvertiseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_collage_advertise"
+            android:theme="@style/Theme.MainNegarestan" />
+        <activity
+            android:name=".screen.addadv.MoqetteAdvertiseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_moqette_advertise"
+            android:theme="@style/Theme.MainNegarestan" />
+        <activity
+            android:name=".screen.addadv.RugAdvertiseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_rug_advertise"
+            android:theme="@style/Theme.MainNegarestan" />
+        <activity
+            android:name=".screen.addadv.CarpetPanelAdvertiseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_carpet_panel_advertise"
+            android:theme="@style/Theme.MainNegarestan" />
+        <activity
+            android:name=".screen.addadv.CarpetAdvertiseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_carpet_advertise"
+            android:theme="@style/Theme.MainNegarestan" />
+        <activity
+            android:name=".screen.advertisescreens.CarpetAdvertiseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_carpet_advertise" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

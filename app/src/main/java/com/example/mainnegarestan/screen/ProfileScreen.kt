@@ -3,6 +3,7 @@ package com.example.mainnegarestan.screen
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -38,12 +39,12 @@ fun ProfileScreen(navController: NavController) {
     Column(modifier = Modifier.fillMaxWidth()) {
         Spacer(modifier = Modifier.height(70.dp))
 
-        Column(modifier = Modifier.fillMaxWidth()) {
+        Row(modifier = Modifier.fillMaxWidth().height(120.dp)) {
+            Spacer(modifier = Modifier.width(10.dp))
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
-                    .size(150.dp)
-                    .align(alignment = Alignment.CenterHorizontally)
+                    .size(100.dp)
                     .background(
                         Color(android.graphics.Color.parseColor("#ddc5a1"))
                     )
@@ -54,16 +55,25 @@ fun ProfileScreen(navController: NavController) {
                     modifier = Modifier.fillMaxWidth().fillMaxHeight()
                 )
             }
+            Spacer(modifier = Modifier.width(20.dp))
+
+            Column {
+                Spacer(modifier = Modifier.height(30.dp))
+                Text("شماره موبایل", style = TextStyle(fontSize = 20.sp), textAlign = TextAlign.Center)
+            }
             Spacer(modifier = Modifier.height(10.dp))
-            Text(
-                "شماره موبایل", style = TextStyle(fontSize = 20.sp), textAlign = TextAlign.Center,
-            modifier = Modifier.align(alignment = Alignment.CenterHorizontally))
+            Divider(modifier = Modifier.fillMaxWidth().padding( start =20.dp , end = 20.dp))
         }
         Spacer(modifier = Modifier.height(10.dp))
-        TextButton(onClick = {}){
-            Text(text = "آگهی های من", style = TextStyle(fontSize = 20.sp))
-        }
         Divider(modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp))
+
+        Row(modifier = Modifier.fillMaxWidth()) {
+            TextButton(onClick = {
+            }) {
+                Text(text = "آگهی های من", style = TextStyle(fontSize = 20.sp))
+            }
+        }
+        Divider(modifier = Modifier.fillMaxWidth().padding( start = 20.dp, end = 20.dp))
         TextButton(onClick = {
             navController.navigate("login")
         }){
@@ -76,7 +86,18 @@ fun ProfileScreen(navController: NavController) {
             Text(text ="گزارش کلاهبرداری", style = TextStyle(fontSize = 20.sp))
         }
         Divider(modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp))
-
+        TextButton(onClick = {
+            navController.navigate("newadtwo")
+        }){
+            Text(text ="قوانین نگارستان", style = TextStyle(fontSize = 20.sp))
+        }
+        Divider(modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp))
+        TextButton(onClick = {
+            navController.navigate("newadtwo")
+        }){
+            Text(text ="درباره ی نگارستان", style = TextStyle(fontSize = 20.sp))
+        }
+        Divider(modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp))
         Spacer(modifier = Modifier.height(80.dp))
     }
 }
