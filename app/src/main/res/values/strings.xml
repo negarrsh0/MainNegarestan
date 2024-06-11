@@ -38,4 +38,12 @@
     <string name="title_activity_moqette_advertise">MoqetteAdvertiseActivity</string>
     <string name="title_activity_collage_advertise">CollageAdvertiseActivity</string>
     <string name="title_activity_accessories_advertise">AccessoriesAdvertiseActivity</string>
+    <string name="title_for_term">به بازار خرید و فروش فرش و تابلو فرش نگارستان خوش آمدید</string>
+    <string name="title2_for_term">شما میتوانید بی نهایت آگهی در این بازار خرید و فروش انواع ارسال بفرمایید تا زمانیکه شرایط زیر در این اپلیکیشن پذیرا باشید. همچنین در صورت عدم رعایت حتی یکی از موارد ذیل حساب شما برای همیشه مسدود خواهد شد.</string>
+    <string name="term1">1) از ارسال آگهی های خلاف عرف و قوانین به شدت خودداری فرمایید.</string>
+    <string name="term2">2) تمامی آگهی ها و همچنین آی پی ارسال کننده آگهی (جهت پیگیری متخلفین) برای همیشه محفوظ خواهد  بود.</string>
+    <string name="term3">3) به هیچ وجه در آگهی ها از کلمات توهین آمیز استفاده نکنید.</string>
+    <string name="term4">4) هرگز بدون رویت کالای مورد نظر ، پول به حساب فروشنده واریز نکنید.</string>
+    <string name="term5">5) نگارستان هیچگونه مسثولیتی در قبال کلاهبرداری حین خرید و فروش  های شما را نمیپذیرد و صرفا یک اپلیکیشن واسطه می باشد پس در معاملات خود نهایت دقت را به عمل آورید.</string>
+    <string name="aboutus">این اپلیکیشن با هدف خرید و فروش بدون واسطه ی آنلاین آغاز به کار کرد. در صورتی که هر  پیشنهاد و یا انتقادی داشتید از طریق ایمیل زیر  با ما در تماس باشید.</string>
 </resources>

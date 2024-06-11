@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.ViewModelFactoryDsl
 import com.example.mainnegarestan.model.ServiceResponse
 import com.example.mainnegarestan.model.product.CarpetPanel
+import com.example.mainnegarestan.model.product.Product
 import com.example.mainnegarestan.repository.product.CarpetPanelRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -18,7 +19,7 @@ import javax.inject.Inject
 class CarpetPanelViewModel @Inject constructor(var repository: CarpetPanelRepository): ViewModel() {
 
 
-    var dataList = mutableStateOf<List<CarpetPanel>>(listOf())
+    var dataList = mutableStateOf<List<Product>>(listOf())
     var isLoading = mutableStateOf(true)
 
     init {
@@ -30,7 +31,7 @@ class CarpetPanelViewModel @Inject constructor(var repository: CarpetPanelReposi
         }
     }
 
-    fun getCarpetPanel(onSuccess: (response: ServiceResponse<CarpetPanel>) -> Unit){
+    fun getCarpetPanel(onSuccess: (response: ServiceResponse<Product>) -> Unit){
         viewModelScope.launch {
             var data = repository.getCarpetPanel()
             onSuccess(data)

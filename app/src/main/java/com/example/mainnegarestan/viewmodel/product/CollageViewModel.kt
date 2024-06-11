@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mainnegarestan.model.ServiceResponse
 import com.example.mainnegarestan.model.product.Collage
+import com.example.mainnegarestan.model.product.Product
 import com.example.mainnegarestan.repository.product.CollageRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -14,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class CollageViewModel @Inject constructor(var repository: CollageRepository): ViewModel() {
 
-    var dataList = mutableStateOf<List<Collage>>(listOf())
+    var dataList = mutableStateOf<List<Product>>(listOf())
     var isLoading = mutableStateOf(true)
 
     init {
@@ -27,7 +28,7 @@ class CollageViewModel @Inject constructor(var repository: CollageRepository): V
     }
 
 
-    fun getCollage(onSuccess: (response: ServiceResponse<Collage>) -> Unit){
+    fun getCollage(onSuccess: (response: ServiceResponse<Product>) -> Unit){
         viewModelScope.launch {
             var data = repository.getCollage()
             onSuccess(data)

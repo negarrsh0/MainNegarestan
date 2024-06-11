@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mainnegarestan.model.ServiceResponse
 import com.example.mainnegarestan.model.product.Carpet
+import com.example.mainnegarestan.model.product.Product
 import com.example.mainnegarestan.repository.product.CarpetRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -14,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class CarpetViewModel @Inject constructor(var repository: CarpetRepository) : ViewModel(){
 
-    var dataList = mutableStateOf<List<Carpet>>(listOf())
+    var dataList = mutableStateOf<List<Product>>(listOf())
     var isLoading = mutableStateOf(true)
 
 
@@ -27,7 +28,7 @@ class CarpetViewModel @Inject constructor(var repository: CarpetRepository) : Vi
         }
     }
 
-    fun getCarpet(onSuccess : (response: ServiceResponse<Carpet>) -> Unit){
+    fun getCarpet(onSuccess : (response: ServiceResponse<Product>) -> Unit){
         viewModelScope.launch {
             var data = repository.getCarpet()
             onSuccess(data)

@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mainnegarestan.screen.component.Loading
-import com.example.mainnegarestan.screen.componet_items.SliderItemView
+import com.example.mainnegarestan.screen.list_items_screens.SliderItemView
 import com.example.mainnegarestan.viewmodel.site.SliderViewModel
 
 @Composable

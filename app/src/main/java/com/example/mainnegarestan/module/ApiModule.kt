@@ -5,9 +5,10 @@ import com.example.mainnegarestan.api.product.CarpetApi
 import com.example.mainnegarestan.api.product.CarpetPanelApi
 import com.example.mainnegarestan.api.product.CollageApi
 import com.example.mainnegarestan.api.product.MoquetteApi
-import com.example.mainnegarestan.api.product.ProdectApi
+import com.example.mainnegarestan.api.product.ProductApi
 import com.example.mainnegarestan.api.product.RugApi
 import com.example.mainnegarestan.api.site.SliderApi
+import com.example.mainnegarestan.api.user.UserApi
 import com.example.mainnegarestan.model.product.Collage
 import com.example.mainnegarestan.model.product.Rug
 import com.example.mainnegarestan.model.site.Slider
@@ -19,6 +20,7 @@ import com.example.mainnegarestan.repository.product.MoqueteeRepository
 import com.example.mainnegarestan.repository.product.ProductRepository
 import com.example.mainnegarestan.repository.product.RugRepository
 import com.example.mainnegarestan.repository.site.SliderRepository
+import com.example.mainnegarestan.repository.user.UserRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -62,9 +64,14 @@ object ApiModule {
 
     @Provides
     @Singleton
-    fun provideProductRepository(api: ProdectApi) = ProductRepository(api)
+    fun provideProductRepository(api: ProductApi) = ProductRepository(api)
 
     @Provides
     @Singleton
     fun provideRugRepository(api: RugApi) = RugRepository(api)
+
+
+    @Provides
+    @Singleton
+    fun provideUserApi(api: UserApi) = UserRepository(api)
 }

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mainnegarestan.model.ServiceResponse
 import com.example.mainnegarestan.model.product.Moquette
+import com.example.mainnegarestan.model.product.Product
 import com.example.mainnegarestan.repository.product.MoqueteeRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -14,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class MoquetteViewModel @Inject constructor (val repository: MoqueteeRepository): ViewModel() {
 
-    var dataList = mutableStateOf<List<Moquette>>(listOf())
+    var dataList = mutableStateOf<List<Product>>(listOf())
     var isLoading = mutableStateOf(true)
 
 
@@ -29,9 +30,11 @@ class MoquetteViewModel @Inject constructor (val repository: MoqueteeRepository)
 
 
 
-fun getMoquette(onSuccess : (response: ServiceResponse<Moquette>) -> Unit){
+fun getMoquette(onSuccess : (response: ServiceResponse<Product>) -> Unit){
     viewModelScope.launch {
         var data = repository.getMoquette()
         onSuccess(data)
     }
-}}
+}
+
+}

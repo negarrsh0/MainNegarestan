@@ -5,13 +5,15 @@ import com.example.mainnegarestan.api.product.CarpetApi
 import com.example.mainnegarestan.api.product.CarpetPanelApi
 import com.example.mainnegarestan.api.product.CollageApi
 import com.example.mainnegarestan.api.product.MoquetteApi
-import com.example.mainnegarestan.api.product.ProdectApi
+import com.example.mainnegarestan.api.product.ProductApi
 import com.example.mainnegarestan.api.product.RugApi
 import com.example.mainnegarestan.api.site.SliderApi
+import com.example.mainnegarestan.api.user.UserApi
 import com.example.mainnegarestan.model.product.CarpetPanel
 import com.example.mainnegarestan.model.product.Collage
 import com.example.mainnegarestan.model.product.Product
 import com.example.mainnegarestan.model.product.Rug
+import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,13 +25,14 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+    val gson = GsonBuilder().setLenient().create()
 
     @Provides
     @Singleton
     fun provideApi() : Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://negarrsh.ir/")
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }
 
@@ -72,13 +75,19 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideProductApi(): ProdectApi {
-        return provideApi().create(ProdectApi::class.java)
+    fun provideProductApi(): ProductApi {
+        return provideApi().create(ProductApi::class.java)
     }
 
     @Singleton
     @Provides
     fun provideRugApi(): RugApi {
         return provideApi().create(RugApi::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideUserApi(): UserApi{
+        return provideApi().create(UserApi::class.java)
     }
 }

@@ -9,7 +9,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mainnegarestan.screen.component.Loading
-import com.example.mainnegarestan.screen.componet_items.CarpetListItem
+import com.example.mainnegarestan.screen.list_items_screens.CarpetListItem
 import com.example.mainnegarestan.viewmodel.product.CarpetViewModel
 @Composable
 fun CarpetCategoryListView(viewModel: CarpetViewModel = hiltViewModel()) {

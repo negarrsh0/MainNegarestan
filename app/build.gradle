@@ -86,9 +86,11 @@ dependencies {
     androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
     androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
     androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
+
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
-    implementation "androidx.navigation:navigation-compose:2.7.6"
+//    implementation "androidx.navigation:navigation-compose:2.7.6"
+    implementation "androidx.navigation:navigation-compose:2.4.0-alpha10"
 
     implementation 'com.google.dagger:hilt-android:2.44'
     kapt 'com.google.dagger:hilt-compiler:2.44'
@@ -96,7 +98,9 @@ dependencies {
 
 
     implementation("com.github.skydoves:landscapist-glide:1.3.7")
-
+    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -104,6 +108,10 @@ dependencies {
 
     implementation 'androidx.compose.material:material:1.5.1'
     implementation 'com.github.akardas16:Alerter:1.0.6'
+
+    implementation 'io.coil-kt:coil-compose:1.4.0'
+    implementation "com.google.accompanist:accompanist-permissions:0.23.1"
+
 
 }
 kapt {
